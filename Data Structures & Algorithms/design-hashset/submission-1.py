@@ -1,0 +1,33 @@
+class MyHashSet:
+
+    def __init__(self):
+        self.hashSet = []
+
+    def add(self, key: int) -> None:
+        for i in self.hashSet:
+            if i == key:
+                return
+        self.hashSet.append(key)
+        
+
+    def remove(self, key: int) -> None:
+        try:
+            self.hashSet.remove(key)
+        except:
+            pass
+        
+
+    def contains(self, key: int) -> bool:
+        print(self.hashSet)
+        for i in self.hashSet:
+            if i == key:
+                return True
+        return False
+        
+
+
+# Your MyHashSet object will be instantiated and called as such:
+# obj = MyHashSet()
+# obj.add(key)
+# obj.remove(key)
+# param_3 = obj.contains(key)
